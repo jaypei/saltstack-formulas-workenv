@@ -1,0 +1,17 @@
+
+Install:
+FORMULARS_PATH=`pwd`
+sudo ln -s "$FORMULARS_PATH/file_root" /srv/salt
+sudo ln -s "$FORMULARS_PATH/pillar_root" /srv/pillar
+
+For ubuntu:
+sudo add-apt-repository ppa:saltstack/salt
+sudo apt-get install salt-minion
+
+/etc/salt/minion
+file_client: local
+log_level: debug
+
+
+Run state:
+sudo salt-call --local -l debug state.sls salt.minion

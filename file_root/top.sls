@@ -1,0 +1,6 @@
+#base:
+#  '*':
+#    - devtools
+#    - editors
+#    - internet
+

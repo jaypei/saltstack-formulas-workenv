@@ -1,0 +1,6 @@
+
+chromium-browser:
+  pkg:
+    - installed
+
+
