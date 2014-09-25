@@ -9,3 +9,4 @@ include:
   - devtools
   - internet
   - xmonad
+  - notes
