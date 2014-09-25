@@ -54,4 +54,4 @@ HISTFILE=~/.histfile
 HISTSIZE=1000
 SAVEHIST=1000
 
-[[ -s "$HOME/.profile" ]] && source "$HOME/.profile" # Load the default .profile
+[[ -s "$HOME/.exz_profile" ]] && source "$HOME/.exz_profile" # Load the default .profile

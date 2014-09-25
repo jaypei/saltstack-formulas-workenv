@@ -17,8 +17,6 @@ emacs.d_project:
     - user: jaypei
     - recurse:
       - user
-      - group
-      - mode
 
 emacs.d_dotfile:
   file.symlink:
@@ -27,4 +25,16 @@ emacs.d_dotfile:
     - require:
       - git: emacs.d_project
 
+# elpa cache
+elpa_cache_project:
+  git.latest:
+    - name: "git@git.oschina.net:jaypei/emacs.d-elpa-cache-1.git"
+    - target: {{ emacs_project_dir }}/elpa
+    - identity: {{ pillar["home_dir"] }}/.ssh/id_rsa
+    - unless: "ls {{ emacs_project_dir }}/elpa"
+  file.directory:
+    - name: {{ emacs_project_dir }}/elpa
+    - user: jaypei
+    - recurse:
+      - user
 
