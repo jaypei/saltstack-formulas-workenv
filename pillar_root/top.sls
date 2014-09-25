@@ -1,4 +1,5 @@
 base:
   '*':
     - env
+    - users
 

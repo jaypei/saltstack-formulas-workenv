@@ -2,5 +2,4 @@
 Debian:
   pkgs:
     - zsh
-  ohmyzsh: {}
 {% endload %}

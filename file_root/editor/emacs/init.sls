@@ -12,6 +12,13 @@ emacs.d_project:
     - target: {{ emacs_project_dir }}
     - identity: {{ pillar["home_dir"] }}/.ssh/id_rsa
     - unless: "ls {{ emacs_project_dir }}"
+  file.directory:
+    - name: {{ emacs_project_dir }}
+    - user: jaypei
+    - recurse:
+      - user
+      - group
+      - mode
 
 emacs.d_dotfile:
   file.symlink:
