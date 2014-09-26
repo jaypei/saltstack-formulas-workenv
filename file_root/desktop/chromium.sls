@@ -1,6 +1,4 @@
-
 chromium-browser:
   pkg:
     - installed
-
 

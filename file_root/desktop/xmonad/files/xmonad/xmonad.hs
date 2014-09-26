@@ -203,4 +203,5 @@ myKeys conf@(XConfig {XMonad.modMask = modMask}) =
         | (key, sc) <- zip [xK_w, xK_e, xK_r] [0..]
         , (f, m) <- [(W.view, 0), (W.shift, shiftMask)]]
 
+
 -- vim: ts=2 sw=2 ai et

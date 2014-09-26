@@ -1,4 +1,4 @@
 base:
   'jaypei-office':
-    - exz.jaypei-office
+    - envs.jaypei-office
 

@@ -134,8 +134,8 @@ URxvt.perl-ext-common: default,matcher,clipboard,confirm-paste
 URxvt.matcher.launcher: x-www-browser
 URxvt.matcher.button: 1
 URxvt.iconFile: /usr/share/icons/gnome/scalable/apps/utilities-terminal-symbolic.svg
-URxvt.keysym.Mod4-z: perl:clipboard:copy
-URxvt.keysym.Mod4-x: perl:clipboard:paste
+URxvt.keysym.Mod4-c: perl:clipboard:copy
+URxvt.keysym.Mod4-v: perl:clipboard:paste
 URxvt.iso14755: False
 !URxvtbackground: rgba:1500/1500/1500/ffff
 
