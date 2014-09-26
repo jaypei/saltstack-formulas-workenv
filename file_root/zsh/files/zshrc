@@ -65,7 +65,7 @@ if [[ $EMACS = t ]]; then       # in emacs
     [[ `type precmd` == *' function' ]] && unfunction precmd
     [[ `type preexec` == *' function' ]] && unfunction preexec
 else
-    export EDITOR=emacs -nw
+    export EDITOR="emacs -nw"
 fi
 
 [[ -s "$HOME/.exz_profile" ]] && source "$HOME/.exz_profile" # Load the default .profile

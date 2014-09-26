@@ -3,10 +3,10 @@ include:
   - salt.minion
   - yunti
   - users
-  - editor.emacs
+  - editor
   - zsh
   - devtools
-  - devtools
   - internet
-  - xmonad
+  - desktop.xmonad
+  - desktop.urxvt
   - notes

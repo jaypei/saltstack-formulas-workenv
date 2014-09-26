@@ -1,3 +1,5 @@
-vim:
-  pkg:
-    - installed
+
+include:
+  - editor.emacs
+  - editor.vim
+
