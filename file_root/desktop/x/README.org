@@ -1,0 +1,2 @@
+最好卸载 ibus。
+apt-get remove ibus

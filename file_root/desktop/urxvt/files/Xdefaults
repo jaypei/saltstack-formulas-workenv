@@ -104,8 +104,8 @@ URxvt.mapAlert: true
 URxvt.print-pipe: cat > $(echo urxvt.dump.`date +'%Y%M%d%H%m%S'`)
 
 ! Font
-URxvt.font:xft:Fantasque Sans Mono:size=12:antialias=true,xft:WenQuanYi Bitmap Song:size=13:antialias=true
-URxvt.boldFont:xft:Fantasque Sans Mono:size=12:Bold:antialias=true,xft:WenQuanYi Bitmap Song:size=13:antialias=true
+URxvt.font:xft:Fantasque Sans Mono:size=12:antialias=true,xft:STHeiti:size=13:antialias=true
+URxvt.boldFont:xft:Fantasque Sans Mono:size=12:Bold:antialias=true,xft:STHeiti:size=13:antialias=true
 
 urxvt.letterSpace: -1
 !URxvt.font:xft:Monofur:size=12:Bold,xft:Heiti SC:size=12:Regular
