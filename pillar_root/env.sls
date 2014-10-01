@@ -7,6 +7,7 @@
   {% set home_dir = "/Users/" + main_user %}
 {% endif %}
 
+main_user: {{ main_user }}
 home_dir: {{ home_dir }}
 work_dir: {{ home_dir }}/work
 env: {}

@@ -1,0 +1,10 @@
+# vim: sts=2 ts=2 sw=2 et ai
+{% from "common.jinja" import common with context %}
+
+{% set vim = salt['grains.filter_by']({
+    'RedHat': {},
+    'Debian': {
+        'rcfile': common.home_dir + '/.vimrc',
+        'rcdir': common.home_dir + '/.vim'
+    },
+}, merge=salt['pillar.get']('vim:lookup')) %}

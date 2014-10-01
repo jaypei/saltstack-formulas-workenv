@@ -1,14 +1,14 @@
-
-{% set exz_conf_project_dir = pillar["work_dir"] + "/exz-conf" %}
+# vim: sts=2 ts=2 sw=2 et ai
+{% from "common.jinja" import common with context %}
 
 exz_conf_project:
   git.latest:
     - name: "git@github.com:jaypei/exz-conf"
-    - target: {{ exz_conf_project_dir }}
-    - identity: {{ pillar["home_dir"] }}/.ssh/id_rsa
-    - unless: "ls {{ exz_conf_project_dir }}"
+    - target: {{ common.dotfiles_exz }}
+    - identity: {{ common.privkey_main }}
+    - unless: "ls {{ common.dotfiles_exz }}"
   file.directory:
-    - name: {{ exz_conf_project_dir }}
+    - name: {{ common.dotfiles_exz }}
     - user: jaypei
     - group: jaypei
     - recurse:

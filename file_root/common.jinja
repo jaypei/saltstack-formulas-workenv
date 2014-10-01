@@ -1,4 +1,10 @@
-{% set nostack = salt['grains.filter_by']({
+# vim: sts=2 ts=2 sw=2 et ai
+{% set common = salt['grains.filter_by']({
     'RedHat': {},
-    'Debian': {},
-}, merge=salt['pillar.get']('nostack:lookup')) %}
+    'Debian': {
+        'privkey_main': pillar['main_user'] + '/.ssh/id_rsa',
+        'home_dir': "/home/" + pillar["main_user"],
+        'work_dir': "/home/" + pillar["main_user"] + "/work",
+        'dotfiles_exz': '/home/jaypei/work/exz-conf'
+    },
+}, merge=salt['pillar.get']('common:lookup')) %}
