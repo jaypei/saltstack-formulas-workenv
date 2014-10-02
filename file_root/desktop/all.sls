@@ -4,3 +4,4 @@ include:
   - desktop.xmonad
   - desktop.fcitx
   - desktop.x
+  - desktop.awesome

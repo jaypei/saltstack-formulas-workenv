@@ -65,6 +65,7 @@ if [[ $EMACS = t ]]; then       # in emacs
     [[ `type precmd` == *' function' ]] && unfunction precmd
     [[ `type preexec` == *' function' ]] && unfunction preexec
 else
+    export PS1='%{$fg[green]%}%n:%{$fg_bold[blue]%}%2~ $(git_prompt_info)%{$reset_color%}%(!.#.$) '
     export EDITOR="emacs -nw"
 fi
 
