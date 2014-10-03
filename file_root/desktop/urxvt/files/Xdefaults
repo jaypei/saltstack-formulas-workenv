@@ -18,19 +18,15 @@ URxvt.iso14755_52: false
 ! chrome
 URxvt.url-launcher: chromium
 URxvt.matcher.button: 1
-! clipboard
-!URxvt.keysym.Shift-Control-V: perl:clipboard:paste
-URxvt.keysym.Shift-Control-C: perl:clipboard:copy
-URxvt.keysym.Mod4-k: perl:clipboard:paste
 
 !本地透明设置
 URxvt.transparent: false
 ! URxvt.shading: 0 to 99 darkens, 101 to 200 lightens
-URxvt.shading: 99
+URxvt.shading: 00
 ! only for 24bits color pesudo transparent
 URxvt.inheritPixmap: false
 ! 24 for pesudo transparent, 32 for real transparent
-URxvt.depth: 24
+URxvt.depth: 32
 URxvt.saveLines: 1536
 URxvt.geometry: 80x24
 URxvt.termName: xterm-256color
@@ -38,8 +34,7 @@ URxvt.loginShell: false
 URxvt.urgentOnBell: true
 
 !!光标闪烁
-URxvt.cursorBlink:True
-
+URxvt.cursorBlink: true
 
 !颜色
 URxvt.foreground: #F8F8F2
@@ -104,10 +99,11 @@ URxvt.mapAlert: true
 URxvt.print-pipe: cat > $(echo urxvt.dump.`date +'%Y%M%d%H%m%S'`)
 
 ! Font
-URxvt.font:xft:Fantasque Sans Mono:size=12:antialias=true,xft:STHeiti:size=13:antialias=true
-URxvt.boldFont:xft:Fantasque Sans Mono:size=12:Bold:antialias=true,xft:STHeiti:size=13:antialias=true
+URxvt.font:xft:Fantasque Sans Mono:size=12,xft:STHeiti:size=12
+URxvt.boldFont:xft:Fantasque Sans Mono:size=12:Bold,xft:STHeiti:size=12
 
-urxvt.letterSpace: -1.8
+urxvt.letterSpace: -1
+
 !URxvt.font:xft:Monofur:size=12:Bold,xft:Heiti SC:size=12:Regular
 !URxvt.boldFont:xft:Monofur:size=12:Bold,xft:Heiti SC:size=12:Regular
 !URxvtfont:-gohu-gohufont-medium-r-normal--14-100-100-100-c-80-iso8859-1,xft:SimSun:pixelsize=14:Regular
@@ -122,7 +118,7 @@ URxvt.inputMethod: fcitx
 !Urxvt.imFont: -adobe-times-bold-i-normal--12-120-75-75-p-68-iso10646-1
 
 !UI
-URxvt.internalBorder:12
+URxvt.internalBorder:10
 URxvt.externalBorder:0
 
 ! Extensions
