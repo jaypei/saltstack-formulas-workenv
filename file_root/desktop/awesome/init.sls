@@ -29,12 +29,5 @@ awesome-extra:
     - source: salt://desktop/awesome/files/etc/xdg/autostart/gnome-settings-daemon.desktop
     - makedirs: True
 
-xserver-xephyr:
-  pkg.installed
-
-awmtt:
-  git.latest:
-    - name: https://github.com/mikar/awmtt.git
-    - target: {{ common.work_dir }}/awmtt
-    - unless: "ls {{ common.work_dir }}/awmtt"
-
+include:
+  - desktop.awesome.awmtt
