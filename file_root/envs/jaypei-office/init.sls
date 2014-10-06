@@ -7,3 +7,4 @@ include:
   - notes
   - zsh
   - desktop.all
+  - unix.ubuntu
