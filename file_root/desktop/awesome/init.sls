@@ -2,6 +2,10 @@
 
 {% from "common.jinja" import common with context %}
 
+include:
+  - desktop.awesome.awmtt
+  - desktop.gnome-session
+  - dotfiles
 
 awesome:
   pkg.installed
@@ -29,5 +33,8 @@ awesome-extra:
     - source: salt://desktop/awesome/files/etc/xdg/autostart/gnome-settings-daemon.desktop
     - makedirs: True
 
-include:
-  - desktop.awesome.awmtt
+dotfiles:
+  file.symlink:
+    - name: {{ common.home_dir }}/.config/awesome
+    - target: {{ common.dotfiles_dir }}/dotfiles-awesome
+    - force: true

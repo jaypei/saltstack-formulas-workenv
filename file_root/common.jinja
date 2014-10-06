@@ -1,10 +1,17 @@
 # vim: sts=2 ts=2 sw=2 et ai
+
+{% set _main_user = pillar['main_user'] %}
+{% set _main_group = pillar.get('main_group', _main_user) %}
+
 {% set common = salt['grains.filter_by']({
     'RedHat': {},
     'Debian': {
-        'privkey_main': pillar['main_user'] + '/.ssh/id_rsa',
-        'home_dir': "/home/" + pillar["main_user"],
-        'work_dir': "/home/" + pillar["main_user"] + "/work",
-        'dotfiles_exz': '/home/jaypei/work/exz-conf'
+        'privkey_main': "/home/" + _main_user + '/.ssh/id_rsa',
+        'home_dir': "/home/" + _main_user,
+        'work_dir': "/home/" + _main_user + "/work",
+        'dotfiles_exz': '/home/jaypei/work/exz-conf',
+        'dotfiles_dir': '/home/jaypei/work',
+        'main_user': _main_user,
+        'main_group': _main_group,
     },
 }, merge=salt['pillar.get']('common:lookup')) %}

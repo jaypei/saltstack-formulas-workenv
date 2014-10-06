@@ -16,3 +16,19 @@ exz_conf_project:
       - group
       - mode
 
+{% for df_name in ("dotfiles-unix", "dotfiles-awesome") %}
+{{ df_name }}:
+  git.latest:
+    - name: "git@github.com:jaypei/{{ df_name }}.git"
+    - target: {{ common.dotfiles_dir }}/{{ df_name }}
+    - identity: {{ common.privkey_main }}
+    - unless: "ls {{ common.dotfiles_dir }}/{{ df_name }}/.git"
+  file.directory:
+    - name: {{ common.dotfiles_dir }}/{{ df_name }}
+    - user: {{ common.main_user }}
+    - group: {{ common.main_group }}
+    - recurse:
+      - user
+      - group
+
+{% endfor %}

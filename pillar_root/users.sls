@@ -4,5 +4,5 @@ users:
     fullname: ZhenPei
     shell: /usr/bin/zsh
     sudouser: True
-    sudo_rules: 
+    sudo_rules:
       - ALL=(ALL:ALL) NOPASSWD:ALL
