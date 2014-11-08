@@ -1,24 +1,18 @@
 
-vimwiki_project:
+{% from "common.jinja" import common with context %}
+
+org-dir:
   git.latest:
-    - name: git@git.oschina.net:jaypei/vimwiki.git
-    - target: {{ pillar["work_dir"] }}/vimwiki
-    - identity: {{ pillar["home_dir"] }}/.ssh/id_rsa
-    - unless: 'ls {{ pillar["work_dir"] }}/vimwiki'
+    - name: git@bitbucket.org:jaypei/org.git
+    - target: {{ common.work_dir }}/org
+    - identity: {{ common.home_dir }}/.ssh/id_rsa
+    - unless: 'ls {{ common.work_dir }}/vimwiki'
+
   file.directory:
-    - name: {{ pillar["work_dir"] }}/vimwiki
-    - user: jaypei
-    - group: jaypei
+    - name: {{ common.work_dir }}/org
+    - user: {{ common.main_user }}
+    - group: {{ common.main_group }}
     - recurse:
       - user
       - group
       - mode
-
-org_link:
-  file.symlink:
-    - name: {{ pillar["work_dir"] }}/org
-    - target: {{ pillar["work_dir"] }}/vimwiki/org
-    - user: jaypei
-    - group: jaypei
-    - require:
-      - git: vimwiki_project
