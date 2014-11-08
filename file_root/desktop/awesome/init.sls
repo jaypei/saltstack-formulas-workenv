@@ -8,17 +8,18 @@ include:
   - dotfiles
 
 awesome-ppa:
-  pkgrepo:
-    - managed
+  pkgrepo.managed:
     - ppa: klaus-vormweg/awesome
 
 awesome:
-  pkg:
-    - installed
+  pkg.installed:
     - requires:
       - pkgrepo: awesome-ppa
 
 awesome-extra:
+  pkg.installed
+
+shutter:
   pkg.installed
 
 /usr/share/gnome-session/sessions/awesome.session:
