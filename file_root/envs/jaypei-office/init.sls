@@ -3,7 +3,7 @@ include:
   - yunti
   - devtools
   - users
-  - editors
+  - editor
   - notes
   - zsh
   - desktop.all

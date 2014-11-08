@@ -7,8 +7,16 @@ include:
   - desktop.gnome-session
   - dotfiles
 
+awesome-ppa:
+  pkgrepo:
+    - managed
+    - ppa: klaus-vormweg/awesome
+
 awesome:
-  pkg.installed
+  pkg:
+    - installed
+    - requires:
+      - pkgrepo: awesome-ppa
 
 awesome-extra:
   pkg.installed

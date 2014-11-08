@@ -1,5 +1,7 @@
 {% load_yaml as rawmap %}
-Debian:
+Ubuntu:
   pkgs:
     - zsh
+  sls_include:
+    - dotfiles-unix
 {% endload %}
