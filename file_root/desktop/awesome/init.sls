@@ -22,6 +22,12 @@ awesome-extra:
 shutter:
   pkg.installed
 
+parcellite:
+  pkg.installed
+
+kbdd:
+  pkg.installed
+
 /usr/share/gnome-session/sessions/awesome.session:
   file.managed:
     - source: salt://desktop/awesome/files/usr/share/gnome-session/sessions/awesome.session
