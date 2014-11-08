@@ -36,10 +36,8 @@ awesome-extra:
     - source: salt://desktop/awesome/files/usr/share/xsessions/awesome-gnome.desktop
     - makedirs: True
 
-/etc/xdg/autostart/gnome-settings-daemon.desktop:
-  file.managed:
-    - source: salt://desktop/awesome/files/etc/xdg/autostart/gnome-settings-daemon.desktop
-    - makedirs: True
+# autotstarts
+
 
 dotfiles:
   file.symlink:
