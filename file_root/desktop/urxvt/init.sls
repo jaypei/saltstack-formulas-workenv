@@ -14,7 +14,7 @@ urxvt:
 
 {{ common.home_dir }}/.Xdefaults:
   file.symlink:
-    - target: {{ common.dotfiles_dir }}/dotfiles-unix/gnome-session/gnomerc
+    - target: {{ common.dotfiles_dir }}/dotfiles-unix/x/Xdefaults
     - force: true
 
 /usr/lib/urxvt/perl/clipboard:
