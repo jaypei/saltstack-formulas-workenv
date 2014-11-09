@@ -6,7 +6,7 @@ org-dir:
     - name: git@bitbucket.org:jaypei/org.git
     - target: {{ common.work_dir }}/org
     - identity: {{ common.home_dir }}/.ssh/id_rsa
-    - unless: 'ls {{ common.work_dir }}/vimwiki'
+    - unless: 'ls {{ common.work_dir }}/org'
 
   file.directory:
     - name: {{ common.work_dir }}/org
