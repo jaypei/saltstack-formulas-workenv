@@ -26,3 +26,18 @@ fcitx-googlepinyin:
   file.managed:
     - sources:
       - salt://desktop/fcitx/files/org.freedesktop.IBus.service
+
+/usr/bin/ibus:
+  file.symlink:
+    - target: /bin/false
+    - force: True
+
+/usr/bin/ibus-setup:
+  file.symlink:
+    - target: /bin/false
+    - force: True
+
+/usr/bin/ibus-daemon:
+  file.symlink:
+    - target: /bin/false
+    - force: True

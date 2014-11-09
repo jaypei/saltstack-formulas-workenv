@@ -1,22 +1,25 @@
 
-Install:
+
+* Usage
+
+** Install
+
+#+BEGIN_SRC sh
+cd <project-path>
 FORMULARS_PATH=`pwd`
 sudo ln -s "$FORMULARS_PATH/file_root" /srv/salt
 sudo ln -s "$FORMULARS_PATH/pillar_root" /srv/pillar
+#+END_SRC
 
-For ubuntu:
-sudo add-apt-repository ppa:saltstack/salt
-sudo apt-get install salt-minion
-
-/etc/salt/minion
+打开 /etc/salt/minion，设置为本地模式:
+#+BEGIN_SRC conf
 file_client: local
-log_level: debug
+#+END_SRC
 
 
-Run state:
+** Run state:
+
+#+BEGIN_SRC sh
 sudo salt-call --local -l debug state.sls salt.minion
-
-
-Ubuntu下解决输入法问题：
-dpkg --remove --force-depends ibus
+#+END_SRC
 
