@@ -6,3 +6,4 @@ include:
   - desktop.awesome
   - desktop.network-manager
   - desktop.file-manager
+  - desktop.gnome-session

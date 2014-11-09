@@ -1,4 +1,6 @@
 base:
   'jaypei-office':
-    - envs.jaypei-office
+    - envs.ubuntu-desktop
+  'jaypei-host2':
+    - envs.ubuntu-desktop
 

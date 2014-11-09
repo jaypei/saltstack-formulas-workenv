@@ -1,0 +1,12 @@
+include:
+  - devtools
+  - editor.all
+  - nginx
+  - salt.minion
+  - unix
+  - yunti
+  - desktop.all
+  - dotfiles
+  - notes
+  - users
+  - zsh

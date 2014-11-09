@@ -12,11 +12,6 @@ urxvt:
   pkg.installed:
     - name: rxvt-unicode
 
-{{ common.home_dir }}/.Xdefaults:
-  file.symlink:
-    - target: {{ common.dotfiles_dir }}/dotfiles-unix/x/Xdefaults
-    - force: true
-
 /usr/lib/urxvt/perl/clipboard:
   file.managed:
     - source: salt://desktop/urxvt/files/clipboard-script

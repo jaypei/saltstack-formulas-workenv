@@ -15,3 +15,8 @@ log_level: debug
 
 Run state:
 sudo salt-call --local -l debug state.sls salt.minion
+
+
+Ubuntu下解决输入法问题：
+dpkg --remove --force-depends ibus
+
