@@ -11,10 +11,6 @@ fcitx-googlepinyin:
   pkg:
     - installed
 
-ibus:
-  pkg:
-    - removed
-
 /etc/profile.d/exz-fcitx.sh:
   file.managed:
     - source: salt://desktop/fcitx/files/etc/profile.d/exz-fcitx.sh
@@ -26,3 +22,7 @@ ibus:
     - requires:
       - pkg: im-switch
 
+/usr/share/dbus-1/services/org.freedesktop.IBus.service:
+  file.managed:
+    - sources:
+      - salt://desktop/fcitx/files/org.freedesktop.IBus.service
