@@ -22,9 +22,6 @@ awesome-extra:
 shutter:
   pkg.installed
 
-parcellite:
-  pkg.installed
-
 kbdd:
   pkg.installed
 
