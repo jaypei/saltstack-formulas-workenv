@@ -20,6 +20,6 @@ file_client: local
 ** Run state:
 
 #+BEGIN_SRC sh
-sudo salt-call --local -l debug state.sls salt.minion
+sudo salt-call state.highstate
 #+END_SRC
 
