@@ -12,5 +12,6 @@ users:
       - plugdev
       - lpadmin
       - sambashare
+      - whoopsie
     sudo_rules:
       - ALL=(ALL:ALL) NOPASSWD:ALL
