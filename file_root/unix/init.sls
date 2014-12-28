@@ -15,3 +15,8 @@
   file.symlink:
     - target: {{ common.dotfiles_dir }}/dotfiles-unix/profile/ubuntu
     - force: true
+
+{{ common.home_dir }}/.tmux.conf:
+  file.symlink:
+    - target: {{ common.dotfiles_dir }}/dotfiles-unix/tmux/tmux.conf
+    - force: true

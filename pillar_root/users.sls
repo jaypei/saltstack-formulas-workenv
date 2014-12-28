@@ -13,5 +13,6 @@ users:
       - lpadmin
       - sambashare
       - whoopsie
+      - vboxusers
     sudo_rules:
       - ALL=(ALL:ALL) NOPASSWD:ALL

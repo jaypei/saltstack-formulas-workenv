@@ -1,3 +1,7 @@
+
+unity-control-center:
+  pkg.installed
+
 include:
   - desktop.chromium
   - desktop.urxvt
@@ -7,3 +11,4 @@ include:
   - desktop.network-manager
   - desktop.file-manager
   - desktop.gnome-session
+
