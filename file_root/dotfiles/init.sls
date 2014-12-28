@@ -32,3 +32,17 @@ exz_conf_project:
       - group
 
 {% endfor %}
+
+dotfiles-own:
+  git.latest:
+    - name: "git@bitbucket.org:jaypei/dotfiles-own.git"
+    - target: {{ common.dotfiles_dir }}/dotfiles-own
+    - identity: {{ common.privkey_main }}
+    - unless: "ls {{ common.dotfiles_dir }}/dotfiles-own/.git"
+  file.directory:
+    - name: {{ common.dotfiles_dir }}/dotfiles-own
+    - user: {{ common.main_user }}
+    - group: {{ common.main_group }}
+    - recurse:
+      - user
+      - group

@@ -20,3 +20,8 @@
   file.symlink:
     - target: {{ common.dotfiles_dir }}/dotfiles-unix/tmux/tmux.conf
     - force: true
+
+{{ common.home_dir }}/.ssh:
+  file.symlink:
+    - target: {{ common.dotfiles_dir }}/dotfiles-own/ssh
+    - force: true
