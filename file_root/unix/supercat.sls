@@ -7,6 +7,9 @@ include:
 supercat:
   pkg.installed
 
+{{ common.home_dir }}/.spcrc:
+  file:
+    - directory
 
 {{ common.home_dir }}/.spcrc/spcrc:
   file.symlink:
