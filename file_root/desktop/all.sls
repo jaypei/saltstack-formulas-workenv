@@ -3,6 +3,7 @@ unity-control-center:
   pkg.installed
 
 include:
+  - desktop.x
   - desktop.chromium
   - desktop.urxvt
   - desktop.xmonad

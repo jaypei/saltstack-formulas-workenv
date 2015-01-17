@@ -16,3 +16,8 @@ urxvt:
   file.managed:
     - source: salt://desktop/urxvt/files/clipboard-script
     - mode: 755
+
+/usr/lib/urxvt/perl/font-size:
+  file.managed:
+    - source: salt://desktop/urxvt/files/font-size-script
+    - mode: 755

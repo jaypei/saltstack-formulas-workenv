@@ -1,11 +1,11 @@
 include:
   - devtools
   - editor.all
+  - unix.all
+  - desktop.all
   - nginx
   - salt.minion
-  - unix
   - yunti
-  - desktop.all
   - dotfiles
   - notes
   - users
